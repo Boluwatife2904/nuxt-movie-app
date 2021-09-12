@@ -12,7 +12,7 @@
         placeholder="Search for your favorite movies"
         v-model.lazy="search"
         autocomplete="off"
-        @keyup.enter="searchMovies"
+        @keyup.enter="$fetch"
       />
       <button
         v-show="search !== '' || searchedMovies.length > 0"
@@ -24,7 +24,7 @@
     </div>
     <!-- Loader -->
     <Loader v-if="$fetchState.pending" />
-    
+
     <!-- Movies Section -->
     <div v-else class="container movies">
       <!-- When Users search for a movie -->
@@ -80,7 +80,7 @@ export default {
       this.searchedMovies = [];
     },
   },
-  fetchDelay: 5000,
+  fetchDelay: 1000,
   async fetch() {
     if (this.search === "") {
       await this.getMovies();
@@ -92,10 +92,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.loading {
-  padding-top: 120px;
-  align-items: flex-start;
-}
 .search {
   display: flex;
   padding: 32px 16px;

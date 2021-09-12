@@ -29,8 +29,8 @@ export default {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 2px solid #fff;
-    border-top-color:#c92502;
+    border: 2px solid transparent;
+    border-top-color: #fff;
     animation: circle-loading 1200ms ease infinite;
   }
 }
