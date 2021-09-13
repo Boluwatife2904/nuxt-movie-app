@@ -9,7 +9,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#211f1f' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Get more information about the 20 most popular movies of 2021' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

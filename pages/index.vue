@@ -43,6 +43,18 @@
 <script>
 import axios from "axios";
 export default {
+  head() {
+    return {
+      title: "Movie App: Get Info about 20 most popular movies of the year.",
+      meta: [
+        {
+          hid: 'keywords',
+          name: "keywords",
+          content: "popular, movies, 20, top"
+        }
+      ]
+    }
+  },
   data() {
     return {
       search: "",

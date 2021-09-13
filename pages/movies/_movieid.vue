@@ -60,9 +60,14 @@
 import axios from "axios";
 export default {
   name: "SingleMovie",
+  head() {
+    return {
+      title: `${this.movie.title} - Movie App: Get Info about 20 most popular movies of the year.`,
+    };
+  },
   data() {
     return {
-      movie: null,
+      movie: {},
     };
   },
   methods: {
@@ -76,7 +81,7 @@ export default {
     },
     goBack() {
       this.$router.go(-1);
-    }
+    },
   },
   fetchDelay: 1000,
   async fetch() {
